@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <declare-styleable name="CTPLShimmer">
+        <attr name="shimmer_layout" format="reference" />
+        <attr name="shimmer_child_count" format="integer|reference" />
+        <attr name="shimmer_grid_span" format="integer|reference" />
+        <attr name="shimmer_layout_manager_type" format="enum">
+            <enum name="linear_vertical" value="0" />
+            <enum name="linear_horizontal" value="1" />
+            <enum name="grid" value="2" />
+        </attr>
+        <attr name="shimmer_visibility" format="enum">
+            <enum name="gone" value="0" />
+            <enum name="visible" value="1" />
+        </attr>
+        <attr name="shimmer_line_alpha" format="float|reference" />
+    </declare-styleable>
+
+</resources>

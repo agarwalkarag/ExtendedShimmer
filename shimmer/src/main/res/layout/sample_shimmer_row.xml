@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/shimmer_placeholder_square"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent=".2"
+        app:shapeAppearanceOverlay="@style/shapeableImageView" />
+
+    <View
+        android:id="@+id/row1"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_gravity="top"
+        android:layout_marginStart="12dp"
+        android:background="@color/shimmer_color"
+        app:layout_constraintBottom_toTopOf="@id/row2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img"
+        app:layout_constraintTop_toTopOf="@id/img" />
+
+    <View
+        android:id="@+id/row2"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/shimmer_color"
+        app:layout_constraintBottom_toTopOf="@id/row3"
+        app:layout_constraintEnd_toEndOf="@id/row1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/row1"
+        app:layout_constraintTop_toBottomOf="@id/row1"
+        app:layout_constraintWidth_percent=".5" />
+
+    <View
+        android:id="@+id/row3"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_gravity="bottom"
+        android:background="@color/shimmer_color"
+        app:layout_constraintBottom_toBottomOf="@id/img"
+        app:layout_constraintEnd_toEndOf="@id/row1"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toStartOf="@id/row1"
+        app:layout_constraintTop_toBottomOf="@id/row2"
+        app:layout_constraintWidth_percent=".3" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

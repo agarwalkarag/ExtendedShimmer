@@ -1,0 +1,3 @@
+rootProject.name = "ExtendedShimmer"
+include ':app'
+include ':shimmer'
