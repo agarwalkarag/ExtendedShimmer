@@ -40,7 +40,7 @@ The actual features are:
 
 	```
 	dependencies {
-		implementation 'com.github.agarwalkarag:ExtendedShimmer:1.0''
+		implementation 'com.github.agarwalkarag:ExtendedShimmer:1.0'
 	}
 	```
 
