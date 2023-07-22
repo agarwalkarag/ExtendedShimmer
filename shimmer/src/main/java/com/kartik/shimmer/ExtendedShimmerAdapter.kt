@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.recyclerview.widget.RecyclerView
 
-class ExtendedCtplShimmerAdapter(layoutReference: Int) :
-    RecyclerView.Adapter<ExtendedCtplShimmerAdapter.CustomViewHolder>() {
+class ExtendedShimmerAdapter(layoutReference: Int) :
+    RecyclerView.Adapter<ExtendedShimmerAdapter.CustomViewHolder>() {
 
     private var list: ArrayList<String> = ArrayList()
     var layoutRef = 0

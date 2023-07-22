@@ -2,7 +2,7 @@
 
 <resources>
 
-    <declare-styleable name="CTPLShimmer">
+    <declare-styleable name="KrtkShimmer">
         <attr name="shimmer_layout" format="reference" />
         <attr name="shimmer_child_count" format="integer|reference" />
         <attr name="shimmer_grid_span" format="integer|reference" />
