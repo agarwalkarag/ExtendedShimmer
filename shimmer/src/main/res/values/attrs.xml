@@ -16,6 +16,7 @@
             <enum name="visible" value="1" />
         </attr>
         <attr name="shimmer_line_alpha" format="float|reference" />
+        <attr name="shimmer_stretch_horizontal" format="boolean" />
     </declare-styleable>
 
 </resources>

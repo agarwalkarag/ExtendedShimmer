@@ -7,14 +7,16 @@ import android.view.ViewGroup
 import android.view.WindowManager
 import androidx.recyclerview.widget.RecyclerView
 
-class ExtendedShimmerAdapter(layoutReference: Int) :
+class ExtendedShimmerAdapter(layoutReference: Int, stretchHorizontal: Boolean) :
     RecyclerView.Adapter<ExtendedShimmerAdapter.CustomViewHolder>() {
 
     private var list: ArrayList<String> = ArrayList()
     var layoutRef = 0
+    var stretchHorizontal = true
 
     init {
         this.layoutRef = layoutReference
+        this.stretchHorizontal = stretchHorizontal
     }
 
     inner class CustomViewHolder(view: View) : RecyclerView.ViewHolder(view) {}
@@ -25,12 +27,14 @@ class ExtendedShimmerAdapter(layoutReference: Int) :
         val windowManager =
             viewGroup.context.getSystemService(Context.WINDOW_SERVICE) as WindowManager
 
-        rootView.setLayoutParams(
-            RecyclerView.LayoutParams(
-                RecyclerView.LayoutParams.MATCH_PARENT,
-                RecyclerView.LayoutParams.WRAP_CONTENT
+        if (stretchHorizontal) {
+            rootView.setLayoutParams(
+                RecyclerView.LayoutParams(
+                    RecyclerView.LayoutParams.MATCH_PARENT,
+                    RecyclerView.LayoutParams.WRAP_CONTENT
+                )
             )
-        )
+        }
 
         return CustomViewHolder(rootView)
     }

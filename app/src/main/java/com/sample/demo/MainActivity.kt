@@ -1,11 +1,13 @@
 package com.sample.demo
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.Window
 import android.view.WindowManager
 import androidx.appcompat.app.AppCompatActivity
 import com.sample.demo.databinding.ActivityMainBinding
+import java.net.URI
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         binding.type3.setOnClickListener {
             startActivity(Intent(this, ActivityTypeThree::class.java))
+        }
+        binding.type4.setOnClickListener {
+            startActivity(Intent(this, ActivityTypeFour::class.java))
         }
     }
 }

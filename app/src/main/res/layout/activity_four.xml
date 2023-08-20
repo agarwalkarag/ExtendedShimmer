@@ -10,11 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
-        android:orientation="horizontal"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintTop_toTopOf="parent"
         tools:itemCount="4"
-        tools:listitem="@layout/row_horizontal" />
+        tools:listitem="@layout/row_vertical" />
 
     <com.kartik.shimmer.ExtendedShimmer
         android:id="@+id/shimmer"
@@ -26,9 +24,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:shimmer_child_count="7"
-        app:shimmer_layout="@layout/shimmer_horizontal"
-        app:shimmer_layout_manager_type="linear_horizontal"
-        app:shimmer_stretch_horizontal="false"
+        app:shimmer_grid_span="3"
+        app:shimmer_layout="@layout/shimmer_row_grid"
+        app:shimmer_layout_manager_type="grid"
         app:shimmer_line_alpha="0.8"
         app:shimmer_visibility="visible" />
 

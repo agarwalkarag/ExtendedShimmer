@@ -25,6 +25,7 @@ class ExtendedShimmer @JvmOverloads constructor(
     private var mLayoutReference: Int = 0
     private var mChildCount: Int = 10
     private var mGridSpan: Int = 1
+    private var stretchHorizontal: Boolean = true
     private var mLineAlpha: Float = 0.6f
     private var mShimmerLayoutManager: Int = 0
 
@@ -44,7 +45,9 @@ class ExtendedShimmer @JvmOverloads constructor(
                 )
 
                 shimmerVisibility =
-                    typedArray.getInteger(R.styleable.KrtkShimmer_shimmer_visibility,1)
+                    typedArray.getInteger(R.styleable.KrtkShimmer_shimmer_visibility, 1)
+
+                stretchHorizontal = typedArray.getBoolean(R.styleable.KrtkShimmer_shimmer_stretch_horizontal, true)
 
                 mChildCount = typedArray.getInteger(R.styleable.KrtkShimmer_shimmer_child_count, 10)
 
@@ -69,7 +72,7 @@ class ExtendedShimmer @JvmOverloads constructor(
     private fun setUpRecycle() {
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
-        var adapterRecycler = ExtendedShimmerAdapter(mLayoutReference)
+        var adapterRecycler = ExtendedShimmerAdapter(mLayoutReference,stretchHorizontal)
         when (mShimmerLayoutManager) {
             0 -> {
                 recyclerView.apply {
@@ -122,7 +125,7 @@ class ExtendedShimmer @JvmOverloads constructor(
     }
 
     inner class ExtendedSpacesItemDecoration(
-        private val space:  Int = 0
+        private val space: Int = 0
 
     ) :
         RecyclerView.ItemDecoration() {

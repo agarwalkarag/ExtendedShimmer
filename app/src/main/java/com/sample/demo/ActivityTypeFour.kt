@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.sample.demo.databinding.ActivityFourBinding
 import com.sample.demo.databinding.ActivityOneBinding
 import com.sample.demo.databinding.ActivityThreeBinding
 import com.sample.demo.databinding.ActivityTwoBinding
@@ -14,15 +15,15 @@ import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
 import kotlin.time.Duration.Companion.seconds
 
-class ActivityTypeThree : AppCompatActivity() {
+class ActivityTypeFour : AppCompatActivity() {
 
     var arrayData = arrayListOf("1", "2", "3", "4", "5")
-    var dataAdapter = RecyclerAdapterHorizontal()
-    private lateinit var binding: ActivityThreeBinding
+    var dataAdapter = RecyclerAdapterGrid()
+    private lateinit var binding: ActivityFourBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityThreeBinding.inflate(layoutInflater)
+        binding = ActivityFourBinding.inflate(layoutInflater)
         setContentView(binding.root)
     }
 
@@ -31,6 +32,7 @@ class ActivityTypeThree : AppCompatActivity() {
 
         binding.recyclerView.apply {
             adapter = dataAdapter
+            layoutManager = GridLayoutManager(this@ActivityTypeFour, 3)
         }
 
         binding.shimmer.showShimmer()
