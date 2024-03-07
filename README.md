@@ -40,7 +40,7 @@ The actual features are:
 
 	```
 	dependencies {
-		implementation 'com.github.agarwalkarag:ExtendedShimmer:1.1'
+		implementation 'com.github.agarwalkarag:ExtendedShimmer:1.3'
 	}
 	```
 
@@ -99,6 +99,12 @@ The actual features are:
 
  When you need to switch Shimmer view visiblity programmatically, just use following method
 
-```  binding.shimmer.showShimmer()```
+```binding.shimmer.showShimmer()```
 
 ```binding.shimmer.hideShimmer()```
+
+ If you want to update shimmer layout reference file programmatically, you can use 
+
+```binding.shimmer.setShimmerLayout()```
+
+ pass layout reference in the parameter of the method

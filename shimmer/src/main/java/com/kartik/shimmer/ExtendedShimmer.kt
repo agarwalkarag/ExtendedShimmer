@@ -113,6 +113,7 @@ class ExtendedShimmer @JvmOverloads constructor(
         for (i in 1..mChildCount) {
             dataArray.add("0")
         }
+        adapterRecycler.clear()
         adapterRecycler.addData(dataArray)
     }
 
@@ -122,6 +123,10 @@ class ExtendedShimmer @JvmOverloads constructor(
 
     fun hideShimmer() {
         findViewById<ShimmerFrameLayout>(R.id.shimmer_view_container).visibility = View.GONE
+    }
+    fun setShimmerLayout(layoutReference:Int) {
+        mLayoutReference = layoutReference
+        setUpRecycle()
     }
 
     inner class ExtendedSpacesItemDecoration(

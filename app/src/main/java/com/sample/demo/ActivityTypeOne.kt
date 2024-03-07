@@ -30,6 +30,8 @@ class ActivityTypeOne : AppCompatActivity() {
             adapter = dataAdapter
         }
 
+        binding.shimmer.setShimmerLayout(R.layout.shimmer_row_vertical)
+
         binding.shimmer.showShimmer()
 
         Handler().postDelayed({
